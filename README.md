@@ -13,7 +13,7 @@ It works like [trojan](https://github.com/trojan-gfw/trojan) but it does not req
 
 ## How to Use It
 服务器端使用：<br>
-<code>wget https://github.com/mmfdsfsd/shadow-tls/blob/master/shadowtlsinstall.sh  &&
+<code>wget https://raw.githubusercontent.com/mmfdsfsd/shadow-tls/master/shadowtlsinstall.sh  &&
 chmod +x shadowtlsinstall.sh &&
 ./shadowtlsinstall.sh</code>
 <br>
