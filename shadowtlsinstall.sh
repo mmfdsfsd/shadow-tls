@@ -9,6 +9,36 @@ DOWNLOAD_URL="https://github.com/mmfdsfsd/shadow-tls/releases/download/v0.2.25/s
 echo "=============================="
 echo " ShadowTLS 一键安装脚本"
 echo "=============================="
+echo ""
+echo "请选择操作："
+echo "1) 安装 ShadowTLS"
+echo "2) 卸载 ShadowTLS"
+read -p "请输入选项 [1-2] (默认:1): " ACTION
+ACTION=${ACTION:-1}
+
+if [[ "$ACTION" == "2" ]]; then
+    echo ""
+    echo "开始卸载 ShadowTLS..."
+
+    # 停止服务
+    systemctl stop shadowtls 2>/dev/null || true
+
+    # 禁用开机启动
+    systemctl disable shadowtls 2>/dev/null || true
+
+    # 删除 service 文件
+    rm -f /etc/systemd/system/shadowtls.service
+
+    # 删除程序
+    rm -f /root/shadowtls
+
+    # 重载 systemd
+    systemctl daemon-reload
+
+    echo ""
+    echo "✅ 卸载完成！"
+    exit 0
+fi
 
 # ===== 交互输入函数 =====
 read_input() {
