@@ -55,7 +55,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=${BIN_PATH} server --listen ${LISTEN} --server ${SERVER} --tls ${TLS} --password ${PASSWORD}
+ExecStart=${BIN_PATH} server --v3 --listen ${LISTEN} --server ${SERVER} --tls ${TLS} --password ${PASSWORD}
 Restart=always
 RestartSec=3
 LimitNOFILE=512000
