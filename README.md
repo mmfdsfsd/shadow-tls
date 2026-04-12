@@ -12,6 +12,10 @@ A proxy to expose real tls handshake to the firewall.
 It works like [trojan](https://github.com/trojan-gfw/trojan) but it does not require signing certificate. The firewall will see **real** tls handshake with **valid certificate** that you choose.
 
 ## How to Use It
+服务器端使用：<br>
+<code>wget https://github.com/mmfdsfsd/shadow-tls/blob/master/shadowtlsinstall.sh  &&
+chmod +x shadowtlsinstall.sh &&
+./shadowtlsinstall.sh</code>
 这个服务需要双边部署，并且它一般需要搭配一个加密代理（因为本项目不包含数据加密和代理请求封装功能，这不是我们的目标）。
 
 通常，你可以在同机部署 shadowsocks-server 和 shadowtls-server；之后在防火墙的另一端部署 shadowsocks-client 和 shadowtls-client。
