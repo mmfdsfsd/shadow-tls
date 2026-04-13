@@ -53,7 +53,7 @@ echo "请输入运行参数（直接回车使用默认值）"
 
 LISTEN=$(read_input "监听地址 --listen" "0.0.0.0:443")
 SERVER=$(read_input "转发地址 --server" "127.0.0.1:8080")
-TLS=$(read_input "伪装域名 --tls" "captive.apple.com")
+TLS=$(read_input "伪装域名 --tls" "www.microsoft.com")
 PASSWORD=$(read_input "密码 --password" "123456")
 
 echo ""
